@@ -7,10 +7,18 @@ from dataclasses import dataclass, field    # Structs to Python
 @dataclass
 class Stage:
     stage_id: int
+    well_id: str
+    order: int
+    duration: float
+    completed: bool = False
+    prop: float = 0.0
+    fluid: float = 0.0
 
 @dataclass
 class Well:
-    well_id: int
+    well_id: str
+    formation: str
+    stages: list = field(default_factory=list)
 
 # Load Excel Data
 
