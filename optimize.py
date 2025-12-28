@@ -174,7 +174,10 @@ def optimize(wells, pop=60, generations=250):
 ##  MAIN    ##
 
 if __name__ == "__main__":
-    filepath = "../test-1.xlsx"
+    filepath = "test-1.xlsx"
     wells = loadFromExcel(filepath)
 
-    print("main:)")
+    for w in wells:
+        print(w.well_id)
+
+    
